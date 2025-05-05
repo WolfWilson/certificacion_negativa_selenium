@@ -1,0 +1,29 @@
+🕓 Inicio: 2025-04-23 10:58:19
+🔍 Registros Anses = 0: 20
+[✗] 27121048251 | Exp: E-004499-2025 -> [WinError 183] No se puede crear un archivo que ya existe: 'c:\\Users\\wbenitez\\Downloads\\Git\\certificacion_negativa_selenium\\informes_obtenidos\\servicioswww.anses.gob.ar_censite_Antecedentes.aspx.pdf' -> 'c:\\Users\\wbenitez\\Downloads\\Git\\certificacion_negativa_selenium\\informes_obtenidos\\27121048251.pdf'
+[✗] 27175962269 | Exp: E-004500-2025 -> [WinError 183] No se puede crear un archivo que ya existe: 'c:\\Users\\wbenitez\\Downloads\\Git\\certificacion_negativa_selenium\\informes_obtenidos\\servicioswww.anses.gob.ar_censite_Antecedentes.aspx (1).pdf' -> 'c:\\Users\\wbenitez\\Downloads\\Git\\certificacion_negativa_selenium\\informes_obtenidos\\27175962269.pdf'
+[✗] 20232446146 | Exp: E-004738-2025 -> [WinError 183] No se puede crear un archivo que ya existe: 'c:\\Users\\wbenitez\\Downloads\\Git\\certificacion_negativa_selenium\\informes_obtenidos\\servicioswww.anses.gob.ar_censite_Antecedentes.aspx (2).pdf' -> 'c:\\Users\\wbenitez\\Downloads\\Git\\certificacion_negativa_selenium\\informes_obtenidos\\20232446146.pdf'
+[✓] 27216236497 | Exp: E-004739-2025 → fusionado y actualizado (Id 10254)
+[✓] 27237524751 | Exp: E-004889-2025 → fusionado y actualizado (Id 10255)
+[✓] 20135712753 | Exp: E-004891-2025 → fusionado y actualizado (Id 10256)
+[✓] 20169261807 | Exp: E-004892-2025 → fusionado y actualizado (Id 10257)
+[✓] 27174975227 | Exp: E-005319-2025 → fusionado y actualizado (Id 10258)
+[✓] 23230460744 | Exp: E-005321-2025 → fusionado y actualizado (Id 10259)
+[✓] 27225131436 | Exp: E-005322-2025 → fusionado y actualizado (Id 10260)
+[✓] 20173989238 | Exp: E-005364-2025 → fusionado y actualizado (Id 10261)
+[✓] 27182759088 | Exp: E-005581-2025 → fusionado y actualizado (Id 10262)
+[✓] 27247359481 | Exp: E-005583-2025 → fusionado y actualizado (Id 10263)
+[✓] 20143608574 | Exp: E-005584-2025 → fusionado y actualizado (Id 10264)
+[✓] 27232740189 | Exp: E-005585-2025 → fusionado y actualizado (Id 10265)
+[✓] 27213496161 | Exp: E-005881-2025 → fusionado y actualizado (Id 10266)
+[✗] 20113258951 | Exp: E-003574-2025 -> [WinError 183] No se puede crear un archivo que ya existe: 'c:\\Users\\wbenitez\\Downloads\\Git\\certificacion_negativa_selenium\\informes_obtenidos\\servicioswww.anses.gob.ar_censite_Antecedentes.aspx (3).pdf' -> 'c:\\Users\\wbenitez\\Downloads\\Git\\certificacion_negativa_selenium\\informes_obtenidos\\20113258951.pdf'
+[✗] 20169261807 | Exp: E-004892-2025 -> [WinError 183] No se puede crear un archivo que ya existe: 'c:\\Users\\wbenitez\\Downloads\\Git\\certificacion_negativa_selenium\\informes_obtenidos\\servicioswww.anses.gob.ar_censite_Antecedentes.aspx (4).pdf' -> 'c:\\Users\\wbenitez\\Downloads\\Git\\certificacion_negativa_selenium\\informes_obtenidos\\20169261807.pdf'
+[✗] 27174975227 | Exp: E-005319-2025 -> [WinError 183] No se puede crear un archivo que ya existe: 'c:\\Users\\wbenitez\\Downloads\\Git\\certificacion_negativa_selenium\\informes_obtenidos\\servicioswww.anses.gob.ar_censite_Antecedentes.aspx (5).pdf' -> 'c:\\Users\\wbenitez\\Downloads\\Git\\certificacion_negativa_selenium\\informes_obtenidos\\27174975227.pdf'
+[✓] 27252337321 | Exp: E-008434-2025 → fusionado y actualizado (Id 10270)
+
+--- RESUMEN ----------------------
+🟢 Correctos : 14
+🔴 Errores   : 6
+⏱️ Duración  : 0:40:06.373445
+🕓 Fin       : 2025-04-23 11:38:25
+🚪 Fin del script.

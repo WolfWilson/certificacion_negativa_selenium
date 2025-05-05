@@ -1,0 +1,166 @@
+🕓 Servicio iniciado: 2025-04-25 08:16:35
+🔄 08:16:40 → pendientes: 17
+[✓] 20233001148 | Exp: E-008489-2025 → fusionado y actualizado (Id 10280)
+[✓] 27256726594 | Exp: E-008492-2025 → fusionado y actualizado (Id 10281)
+ℹ️  20124663882 | Exp: E-008493-2025 ya posee cert. negativa → se omite.
+[✓] 27243977199 | Exp: E-008502-2025 → fusionado y actualizado (Id 10283)
+[✓] 27137434933 | Exp: E-008506-2025 → fusionado y actualizado (Id 10284)
+[✓] 20236912168 | Exp: E-008522-2025 → fusionado y actualizado (Id 10285)
+[✓] 23167061249 | Exp: E-008563-2025 → fusionado y actualizado (Id 10286)
+[✓] 27173492621 | Exp: E-008448-2025 → fusionado y actualizado (Id 10271)
+[✓] 20118207034 | Exp: E-008453-2025 → fusionado y actualizado (Id 10272)
+[✓] 23253468009 | Exp: E-008468-2025 → fusionado y actualizado (Id 10273)
+[✓] 20258279876 | Exp: E-008470-2025 → fusionado y actualizado (Id 10274)
+ℹ️  27173696596 | Exp: E-008475-2025 ya posee cert. negativa → se omite.
+[✓] 20252378783 | Exp: E-008480-2025 → fusionado y actualizado (Id 10276)
+[✓] 27247516749 | Exp: E-008484-2025 → fusionado y actualizado (Id 10277)
+[✓] 23237959159 | Exp: E-008485-2025 → fusionado y actualizado (Id 10278)
+[✓] 20259610169 | Exp: E-008488-2025 → fusionado y actualizado (Id 10279)
+[✓] 27203827518 | Exp: E-008566-2025 → fusionado y actualizado (Id 10287)
+✅ Ciclo: OK=15 | OMITIDOS=2 | ERR=0
+🕒 Esperando 10 min…
+
+🔄 08:54:51 → pendientes: 1
+🛑 Acceso denegado 20113392186 (intento 1/3)
+🛑 Acceso denegado 20113392186 (intento 2/3)
+🛑 Acceso denegado 20113392186 (intento 3/3)
+[✗] 20113392186 | Exp: E-008572-2025 -> Acceso denegado persistente
+✅ Ciclo: OK=0 | OMITIDOS=0 | ERR=1
+🕒 Esperando 10 min…
+
+🔄 09:07:35 → pendientes: 2
+[✓] 20113392186 | Exp: E-008572-2025 → fusionado y actualizado (Id 10288)
+[✓] 20126838515 | Exp: E-008584-2025 → fusionado y actualizado (Id 10289)
+✅ Ciclo: OK=2 | OMITIDOS=0 | ERR=0
+🕒 Esperando 10 min…
+
+🔄 09:18:47 → pendientes: 84
+[✓] 20165514883 | Exp: E-006895-2025 → fusionado y actualizado (Id 10126)
+[✓] 27125555549 | Exp: E-006942-2025 → fusionado y actualizado (Id 10130)
+[✓] 20084660737 | Exp: E-006967-2025 → fusionado y actualizado (Id 10137)
+[✓] 20128521268 | Exp: E-006983-2025 → fusionado y actualizado (Id 10139)
+[✓] 27224772209 | Exp: E-007015-2025 → fusionado y actualizado (Id 10144)
+[✓] 27122422823 | Exp: E-007319-2025 → fusionado y actualizado (Id 10153)
+ℹ️  20171878544 | Exp: E-007376-2025 ya posee cert. negativa → se omite.
+[✓] 27204126408 | Exp: E-007394-2025 → fusionado y actualizado (Id 10157)
+[✓] 20122421253 | Exp: E-007396-2025 → fusionado y actualizado (Id 10158)
+[✓] 27235080643 | Exp: E-007417-2025 → fusionado y actualizado (Id 10160)
+[✓] 27173412709 | Exp: E-007536-2025 → fusionado y actualizado (Id 10164)
+[✓] 20160918684 | Exp: E-007540-2025 → fusionado y actualizado (Id 10165)
+[✓] 27204242785 | Exp: E-007548-2025 → fusionado y actualizado (Id 10167)
+[✓] 20136882172 | Exp: E-007565-2025 → fusionado y actualizado (Id 10168)
+[✓] 27181457983 | Exp: E-007584-2025 → fusionado y actualizado (Id 10171)
+[✓] 27160042252 | Exp: E-007724-2025 → fusionado y actualizado (Id 10172)
+[✓] 20173691964 | Exp: E-007752-2025 → fusionado y actualizado (Id 10174)
+[✓] 20121041791 | Exp: E-007771-2025 → fusionado y actualizado (Id 10175)
+ℹ️  27160042252 | Exp: E-007724-2025 ya posee cert. negativa → se omite.
+ℹ️  27160042252 | Exp: E-007724-2025 ya posee cert. negativa → se omite.
+ℹ️  20173691964 | Exp: E-007752-2025 ya posee cert. negativa → se omite.
+ℹ️  20121041791 | Exp: E-007771-2025 ya posee cert. negativa → se omite.
+[✓] 27237323462 | Exp: E-007971-2025 → fusionado y actualizado (Id 10186)
+[✓] 20169312444 | Exp: E-007973-2025 → fusionado y actualizado (Id 10187)
+[✓] 27204832027 | Exp: E-008003-2025 → fusionado y actualizado (Id 10189)
+[✓] 20178088182 | Exp: E-008008-2025 → fusionado y actualizado (Id 10190)
+[✓] 27186235806 | Exp: E-008035-2025 → fusionado y actualizado (Id 10193)
+[✓] 27165678406 | Exp: E-008036-2025 → fusionado y actualizado (Id 10194)
+[✓] 20222815348 | Exp: E-008041-2025 → fusionado y actualizado (Id 10196)
+[✓] 20179696461 | Exp: E-008042-2025 → fusionado y actualizado (Id 10197)
+[✓] 20175965956 | Exp: E-008060-2025 → fusionado y actualizado (Id 10200)
+[✓] 20204231932 | Exp: E-008074-2025 → fusionado y actualizado (Id 10201)
+[✓] 27102438162 | Exp: E-008089-2025 → fusionado y actualizado (Id 10203)
+[✓] 20213638085 | Exp: E-008117-2025 → fusionado y actualizado (Id 10204)
+[✓] 27253037348 | Exp: E-008142-2025 → fusionado y actualizado (Id 10207)
+[✓] 20253460068 | Exp: E-008143-2025 → fusionado y actualizado (Id 10208)
+🛑 Acceso denegado 27255341982 (intento 1/3)
+🛑 Acceso denegado 27255341982 (intento 2/3)
+🛑 Acceso denegado 27255341982 (intento 3/3)
+[✗] 27255341982 | Exp: E-008145-2025 -> Acceso denegado persistente
+🛑 Acceso denegado 27241023473 (intento 1/3)
+🛑 Acceso denegado 27241023473 (intento 2/3)
+🛑 Acceso denegado 27241023473 (intento 3/3)
+[✗] 27241023473 | Exp: E-008146-2025 -> Acceso denegado persistente
+🛑 Acceso denegado 27259262416 (intento 1/3)
+🛑 Acceso denegado 27259262416 (intento 2/3)
+🛑 Acceso denegado 27259262416 (intento 3/3)
+[✗] 27259262416 | Exp: E-008149-2025 -> Acceso denegado persistente
+🛑 Acceso denegado 27177888279 (intento 1/3)
+🛑 Acceso denegado 27177888279 (intento 2/3)
+🛑 Acceso denegado 27177888279 (intento 3/3)
+[✗] 27177888279 | Exp: E-008150-2025 -> Acceso denegado persistente
+🛑 Acceso denegado 20249185001 (intento 1/3)
+🛑 Acceso denegado 20249185001 (intento 2/3)
+🛑 Acceso denegado 20249185001 (intento 3/3)
+[✗] 20249185001 | Exp: E-008152-2025 -> Acceso denegado persistente
+🛑 Acceso denegado 27208843708 (intento 1/3)
+🛑 Acceso denegado 27208843708 (intento 2/3)
+🛑 Acceso denegado 27208843708 (intento 3/3)
+[✗] 27208843708 | Exp: E-008153-2025 -> Acceso denegado persistente
+🛑 Acceso denegado 27289449944 (intento 1/3)
+🛑 Acceso denegado 27289449944 (intento 2/3)
+🛑 Acceso denegado 27289449944 (intento 3/3)
+[✗] 27289449944 | Exp: E-008156-2025 -> Acceso denegado persistente
+🛑 Acceso denegado 23230074259 (intento 1/3)
+🛑 Acceso denegado 23230074259 (intento 2/3)
+🛑 Acceso denegado 23230074259 (intento 3/3)
+[✗] 23230074259 | Exp: E-008157-2025 -> Acceso denegado persistente
+🛑 Acceso denegado 27172517531 (intento 1/3)
+🛑 Acceso denegado 27172517531 (intento 2/3)
+🛑 Acceso denegado 27172517531 (intento 3/3)
+[✗] 27172517531 | Exp: E-008159-2025 -> Acceso denegado persistente
+🛑 Acceso denegado 27145226800 (intento 1/3)
+🛑 Acceso denegado 27145226800 (intento 2/3)
+🛑 Acceso denegado 27145226800 (intento 3/3)
+[✗] 27145226800 | Exp: E-008160-2025 -> Acceso denegado persistente
+🛑 Acceso denegado 20254644847 (intento 1/3)
+🛑 Acceso denegado 20254644847 (intento 2/3)
+🛑 Acceso denegado 20254644847 (intento 3/3)
+[✗] 20254644847 | Exp: E-008195-2025 -> Acceso denegado persistente
+🛑 Acceso denegado 27208683409 (intento 1/3)
+🛑 Acceso denegado 27208683409 (intento 2/3)
+🛑 Acceso denegado 27208683409 (intento 3/3)
+[✗] 27208683409 | Exp: E-008227-2025 -> Acceso denegado persistente
+🛑 Acceso denegado 20221317220 (intento 1/3)
+🛑 Acceso denegado 20221317220 (intento 2/3)
+🛑 Acceso denegado 20221317220 (intento 3/3)
+[✗] 20221317220 | Exp: E-008239-2025 -> Acceso denegado persistente
+🛑 Acceso denegado 20247278215 (intento 1/3)
+🛑 Acceso denegado 20247278215 (intento 2/3)
+🛑 Acceso denegado 20247278215 (intento 3/3)
+[✗] 20247278215 | Exp: E-008251-2025 -> Acceso denegado persistente
+🛑 Acceso denegado 27169359747 (intento 1/3)
+🛑 Acceso denegado 27169359747 (intento 2/3)
+[✓] 27169359747 | Exp: E-008292-2025 → fusionado y actualizado (Id 10237)
+[✓] 27172515210 | Exp: E-008307-2025 → fusionado y actualizado (Id 10238)
+🛑 Acceso denegado 20136884280 (intento 1/3)
+🛑 Acceso denegado 20136884280 (intento 2/3)
+🛑 Acceso denegado 20136884280 (intento 3/3)
+[✗] 20136884280 | Exp: E-008351-2025 -> Acceso denegado persistente
+ℹ️  27165626228 | Exp: E-008381-2025 ya posee cert. negativa → se omite.
+ℹ️  20113258951 | Exp: E-003574-2025 ya posee cert. negativa → se omite.
+ℹ️  20213475771 | Exp: E-004622-2025 ya posee cert. negativa → se omite.
+ℹ️  20232446146 | Exp: E-004738-2025 ya posee cert. negativa → se omite.
+ℹ️  27216236497 | Exp: E-004739-2025 ya posee cert. negativa → se omite.
+ℹ️  27237524751 | Exp: E-004889-2025 ya posee cert. negativa → se omite.
+ℹ️  20169261807 | Exp: E-004892-2025 ya posee cert. negativa → se omite.
+ℹ️  27174975227 | Exp: E-005319-2025 ya posee cert. negativa → se omite.
+ℹ️  27225131436 | Exp: E-005322-2025 ya posee cert. negativa → se omite.
+ℹ️  20173989238 | Exp: E-005364-2025 ya posee cert. negativa → se omite.
+ℹ️  27182759088 | Exp: E-005581-2025 ya posee cert. negativa → se omite.
+ℹ️  27247359481 | Exp: E-005583-2025 ya posee cert. negativa → se omite.
+ℹ️  20143608574 | Exp: E-005584-2025 ya posee cert. negativa → se omite.
+ℹ️  27232740189 | Exp: E-005585-2025 ya posee cert. negativa → se omite.
+ℹ️  27213496161 | Exp: E-005881-2025 ya posee cert. negativa → se omite.
+ℹ️  20113258951 | Exp: E-003574-2025 ya posee cert. negativa → se omite.
+ℹ️  20169261807 | Exp: E-004892-2025 ya posee cert. negativa → se omite.
+ℹ️  27174975227 | Exp: E-005319-2025 ya posee cert. negativa → se omite.
+ℹ️  27252337321 | Exp: E-008434-2025 ya posee cert. negativa → se omite.
+ℹ️  20233001148 | Exp: E-008489-2025 ya posee cert. negativa → se omite.
+🛑 Acceso denegado 27256726594 (intento 1/3)
+🛑 Acceso denegado 27256726594 (intento 2/3)
+🛑 Acceso denegado 27256726594 (intento 3/3)
+[✗] 27256726594 | Exp: E-008492-2025 -> Acceso denegado persistente
+🛑 Acceso denegado 27137434933 (intento 1/3)
+🛑 Acceso denegado 27137434933 (intento 2/3)
+🛑 Acceso denegado 27137434933 (intento 3/3)
+[✗] 27137434933 | Exp: E-008506-2025 -> Acceso denegado persistente
+ℹ️  20236912168 | Exp: E-008522-2025 ya posee cert. negativa → se omite.

@@ -1,0 +1,18 @@
+🕓 Servicio iniciado: 2025-04-28 09:41:09
+🔄 09:41:10 → pendientes: 14
+[✓] 27256726594 | Exp: E-008492-2025 → fusionado y actualizado (Id 10281)
+🛑 Acceso denegado 27137434933 (int 1/3)
+🛑 Acceso denegado 27137434933 (int 2/3)
+🛑 Acceso denegado 27137434933 (int 3/3)
+[✗] 27137434933 | Exp: E-008506-2025 -> Acceso denegado persistente
+ℹ️  20236912168 | Exp: E-008522-2025 ya tiene cert. negativa → marcado Anses=1.
+🛑 Acceso denegado 27173492621 (int 1/3)
+🛑 Acceso denegado 27173492621 (int 2/3)
+🛑 Acceso denegado 27173492621 (int 3/3)
+[✗] 27173492621 | Exp: E-008448-2025 -> Acceso denegado persistente
+🛑 Acceso denegado 23253468009 (int 1/3)
+🛑 Acceso denegado 23253468009 (int 2/3)
+🛑 Acceso denegado 23253468009 (int 3/3)
+[✗] 23253468009 | Exp: E-008468-2025 -> Acceso denegado persistente
+🛑 Acceso denegado 20258279876 (int 1/3)
+🛑 Acceso denegado 20258279876 (int 2/3)

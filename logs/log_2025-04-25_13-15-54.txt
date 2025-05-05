@@ -1,0 +1,21 @@
+🕓 Servicio iniciado: 2025-04-25 13:15:54
+🔄 13:15:57 → pendientes: 41
+ℹ️  20171878544 | Exp: E-007376-2025 ya tiene cert. negativa → marcado Anses=1.
+ℹ️  27160042252 | Exp: E-007724-2025 ya tiene cert. negativa → marcado Anses=1.
+ℹ️  27160042252 | Exp: E-007724-2025 ya tiene cert. negativa → marcado Anses=1.
+ℹ️  20173691964 | Exp: E-007752-2025 ya tiene cert. negativa → marcado Anses=1.
+ℹ️  20121041791 | Exp: E-007771-2025 ya tiene cert. negativa → marcado Anses=1.
+[✓] 27208683409 | Exp: E-008227-2025 → fusionado y actualizado (Id 10230)
+[✓] 20221317220 | Exp: E-008239-2025 → fusionado y actualizado (Id 10233)
+[✓] 20247278215 | Exp: E-008251-2025 → fusionado y actualizado (Id 10234)
+[✓] 20136884280 | Exp: E-008351-2025 → fusionado y actualizado (Id 10240)
+ℹ️  27165626228 | Exp: E-008381-2025 ya tiene cert. negativa → marcado Anses=1.
+ℹ️  20113258951 | Exp: E-003574-2025 ya tiene cert. negativa → marcado Anses=1.
+ℹ️  20213475771 | Exp: E-004622-2025 ya tiene cert. negativa → marcado Anses=1.
+ℹ️  20232446146 | Exp: E-004738-2025 ya tiene cert. negativa → marcado Anses=1.
+ℹ️  27216236497 | Exp: E-004739-2025 ya tiene cert. negativa → marcado Anses=1.
+ℹ️  27237524751 | Exp: E-004889-2025 ya tiene cert. negativa → marcado Anses=1.
+ℹ️  20169261807 | Exp: E-004892-2025 ya tiene cert. negativa → marcado Anses=1.
+ℹ️  27174975227 | Exp: E-005319-2025 ya tiene cert. negativa → marcado Anses=1.
+ℹ️  27225131436 | Exp: E-005322-2025 ya tiene cert. negativa → marcado Anses=1.
+ℹ️  20173989238 | Exp: E-005364-2025 ya tiene cert. negativa → marcado Anses=1.

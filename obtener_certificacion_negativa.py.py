@@ -1,109 +1,164 @@
-import os
-import time
-import datetime
+import os, shutil, time, datetime, random
+from pathlib import Path
+from pypdf import PdfReader, PdfWriter
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
-from modules.conexion_db import obtener_cuils_pendientes, marcar_cuil_como_procesado
+from selenium.webdriver.chrome.service import Service
+from modules.conexion_db import obtener_cuils_pendientes, marcar_procesado
 
-# --- Configuración ---
+# ---------------- Parámetros --------------------------------------------------
+MAX_RETRY     = 3
+WAIT_ON_DENY  = 60        # s entre reintentos cuando ANSES bloquea
+WEB_PAUSE     = 10        # s extra tras cada operación web exitosa
+CHECK_EVERY   = 600       # 10 min entre consultas a la BD
+PAUSA_20S     = 20        # pausa normal entre CUILs
+PAUSA_5MIN    = 300       # cada 4 CUILs
+HEADER_NEGA   = "servicioswww.anses.gob.ar/censite/Antecedentes.aspx".lower()
+
+# ---------------- Rutas -------------------------------------------------------
+BASE_DIR   = Path(__file__).parent
+OUTPUT_DIR = BASE_DIR / "informes_obtenidos"
+LOG_DIR    = BASE_DIR / "logs"
+BACKUP_DIR = Path(r"C:\Test_negatividad")
+for d in (OUTPUT_DIR, LOG_DIR, BACKUP_DIR):
+    d.mkdir(parents=True, exist_ok=True)
+
 URL = "https://servicioswww.anses.gob.ar/censite/index.aspx"
-BASE_DIR = os.path.dirname(__file__)
-OUTPUT_DIR = os.path.join(BASE_DIR, "informes_obtenidos")
-LOG_DIR = os.path.join(BASE_DIR, "logs")
-os.makedirs(OUTPUT_DIR, exist_ok=True)
-os.makedirs(LOG_DIR, exist_ok=True)
 
-# --- Logging ---
-inicio = datetime.datetime.now()
-fecha_log = inicio.strftime("%Y-%m-%d_%H-%M-%S")
-log_path = os.path.join(LOG_DIR, f"log_{fecha_log}.txt")
-log = open(log_path, "w", encoding="utf-8")
+# ---------------- Logging -----------------------------------------------------
+inicio_script = datetime.datetime.now()
+log_name = LOG_DIR / f"log_{inicio_script:%Y-%m-%d_%H-%M-%S}.txt"
+def w(msg: str):
+    print(msg)
+    with open(log_name, "a", encoding="utf-8") as f:
+        f.write(msg + "\n")
 
-log.write(f"🕓 Inicio del proceso: {inicio.strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+w(f"🕓 Servicio iniciado: {inicio_script:%Y-%m-%d %H:%M:%S}")
 
-# --- Obtener tareas ---
-tareas = obtener_cuils_pendientes()
-log.write(f"🔍 Tareas pendientes encontradas: {len(tareas)}\n\n")
-print(f"🔍 Tareas pendientes detectadas: {len(tareas)}")
-
-if not tareas:
-    log.write("🚫 No hay tareas pendientes con Anses = 0. Proceso finalizado.\n")
-    log.close()
-    exit()
-
-# --- Configuración del navegador solo si hay tareas ---
-options = Options()
-options.add_experimental_option("prefs", {
-    "printing.print_preview_sticky_settings.appState": """{
-        "recentDestinations": [{"id": "Save as PDF","origin": "local","account": ""}],
-        "selectedDestinationId": "Save as PDF",
-        "version": 2
-    }""",
-    "savefile.default_directory": OUTPUT_DIR
+# ---------------- Selenium ----------------------------------------------------
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+opts = Options()
+opts.add_argument("--log-level=3")
+opts.add_argument("--disable-logging")
+opts.add_argument("--kiosk-printing")
+opts.add_experimental_option("prefs", {
+    "savefile.default_directory": str(OUTPUT_DIR),
+    "printing.print_preview_sticky_settings.appState": """
+       {"recentDestinations":[{"id":"Save as PDF","origin":"local"}],
+        "selectedDestinationId":"Save as PDF","version":2}"""
 })
-options.add_argument('--kiosk-printing')
-driver = webdriver.Chrome(options=options)
+service = Service(log_path="NUL")
+driver = webdriver.Chrome(service=service, options=opts)
 
-# --- Funciones auxiliares ---
+# ---------------- Helpers -----------------------------------------------------
 def dividir_cuil(cuil: str):
     return cuil[:2], cuil[2:10], cuil[10]
 
-def consultar_y_guardar(id_tarea, cuil: str):
-    driver.get(URL)
-    time.sleep(2)
+def ruta_exp(ed: str):
+    return Path(r"\\fs01\Digitalizacion_Jubilaciones") / ed[-4:] / ed[0] / ed
 
-    pre, doc, dv = dividir_cuil(cuil)
-    driver.find_element(By.ID, "txtCuitPre").send_keys(pre)
-    driver.find_element(By.ID, "txtCuitDoc").send_keys(doc)
-    driver.find_element(By.ID, "txtCuitDV").send_keys(dv)
-    driver.find_element(By.ID, "btnVerificar").click()
-    time.sleep(5)
+def fusionar_pdfs(orig: Path, nuevo: Path):
+    writer = PdfWriter()
+    for fp in (orig, nuevo):
+        reader = PdfReader(fp)
+        for page in reader.pages:
+            writer.add_page(page)
+    tmp = orig.with_suffix(".tmp.pdf")
+    with open(tmp, "wb") as f:
+        writer.write(f)
+    tmp.replace(orig)
 
-    driver.execute_script("window.print();")
-    time.sleep(5)
-
-    archivos = sorted(os.listdir(OUTPUT_DIR), key=lambda x: os.path.getctime(os.path.join(OUTPUT_DIR, x)), reverse=True)
-    for archivo in archivos:
-        if archivo.lower().endswith(".pdf"):
-            origen = os.path.join(OUTPUT_DIR, archivo)
-            destino = os.path.join(OUTPUT_DIR, f"{cuil}.pdf")
-            os.rename(origen, destino)
-            marcar_cuil_como_procesado(id_tarea)
-            log.write(f"[✓] PDF generado y guardado para CUIL {cuil} (ID {id_tarea})\n")
+def ya_tiene_negativa(pdf_path: Path) -> bool:
+    if not pdf_path.exists():
+        return False
+    reader = PdfReader(str(pdf_path))
+    start, end = 11, min(len(reader.pages) - 1, 15)
+    for i in range(start, end + 1):
+        texto = reader.pages[i].extract_text() or ""
+        if HEADER_NEGA in texto.lower():
             return True
-    raise Exception("No se detectó ningún PDF generado")
+    return False
 
-# --- Bucle principal ---
-procesados_ok = 0
-procesados_error = 0
+# ---------------- Proceso por CUIL -------------------------------------------
+def procesar(id_tarea: int, cuil: str, expediente: str):
+    carpeta_exp  = ruta_exp(expediente)
+    original_pdf = carpeta_exp / f"{expediente}.pdf"
+    if not original_pdf.exists():
+        raise FileNotFoundError(f"No existe {original_pdf}")
 
-for i, (id_tarea, cuil) in enumerate(tareas, 1):
-    try:
-        consultar_y_guardar(id_tarea, cuil)
-        procesados_ok += 1
-    except Exception as e:
-        msg = f"[✗] Error con CUIL {cuil} (ID {id_tarea}): {str(e)}"
-        log.write(msg + "\n")
-        print(msg)
-        procesados_error += 1
+    # 1) Control previo
+    if ya_tiene_negativa(original_pdf):
+        marcar_procesado(id_tarea)   # <-- ahora se marca como procesado
+        w(f"ℹ️  {cuil} | Exp: {expediente} ya tiene cert. negativa → marcado Anses=1.")
+        return False   # omitido
 
-    if i % 4 == 0:
-        print("⏳ Pausa de 5 minutos...")
-        time.sleep(300)
-    else:
-        print("⏱️ Pausa de 20 segundos...")
-        time.sleep(20)
+    # 2) Intento de generación
+    for intento in range(1, MAX_RETRY + 1):
+        driver.get(URL); time.sleep(2)
 
-driver.quit()
-fin = datetime.datetime.now()
-duracion = fin - inicio
+        pre, doc, dv = dividir_cuil(cuil)
+        driver.find_element(By.ID,"txtCuitPre").send_keys(pre)
+        driver.find_element(By.ID,"txtCuitDoc").send_keys(doc)
+        driver.find_element(By.ID,"txtCuitDV").send_keys(dv)
+        driver.find_element(By.ID,"btnVerificar").click(); time.sleep(5)
 
-# --- Resumen final ---
-log.write("\n--- RESUMEN ---\n")
-log.write(f"🟢 CUILs procesados correctamente: {procesados_ok}\n")
-log.write(f"🔴 Errores: {procesados_error}\n")
-log.write(f"⏱️ Duración total: {str(duracion)}\n")
-log.write(f"🕓 Fin del proceso: {fin.strftime('%Y-%m-%d %H:%M:%S')}\n")
-log.close()
-print("✅ Proceso finalizado. Log generado.")
+        if "Acceso denegado." in driver.page_source:
+            w(f"🛑 Acceso denegado {cuil} (int {intento}/{MAX_RETRY})")
+            if intento < MAX_RETRY:
+                time.sleep(WAIT_ON_DENY)
+                continue
+            raise Exception("Acceso denegado persistente")
+
+        driver.execute_script("window.print()")
+        time.sleep(5 + WEB_PAUSE)    # pausa extra tras impresión
+
+        nuevo_pdf = max(OUTPUT_DIR.glob("*.pdf"), key=os.path.getctime)
+        destino_nuevo = OUTPUT_DIR / f"{cuil}.pdf"
+        if destino_nuevo.exists():
+            destino_nuevo.unlink()
+        nuevo_pdf.rename(destino_nuevo)
+
+        ts = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        shutil.copy2(original_pdf, BACKUP_DIR / f"{expediente}_{ts}.pdf")
+        fusionar_pdfs(original_pdf, destino_nuevo)
+
+        marcar_procesado(id_tarea)
+        w(f"[✓] {cuil} | Exp: {expediente} → fusionado y actualizado (Id {id_tarea})")
+        return True
+    return False
+
+# ---------------- Bucle de servicio ------------------------------------------
+try:
+    while True:
+        ciclo = datetime.datetime.now()
+        tareas = obtener_cuils_pendientes()
+        w(f"🔄 {ciclo:%H:%M:%S} → pendientes: {len(tareas)}")
+
+        if tareas:
+            ok = err = omitidos = 0
+            for idx, (id_t, cuil, exp) in enumerate(tareas, 1):
+                try:
+                    resultado = procesar(id_t, cuil, exp)
+                    if resultado:
+                        ok += 1
+                    else:
+                        omitidos += 1
+                except Exception as e:
+                    err += 1
+                    w(f"[✗] {cuil} | Exp: {exp} -> {e}")
+
+                time.sleep(PAUSA_5MIN if idx % 4 == 0 else PAUSA_20S)
+
+            w(f"✅ Ciclo: OK={ok} | OMITIDOS={omitidos} | ERR={err}")
+        else:
+            w("ℹ️  Sin tareas nuevas.")
+
+        w(f"🕒 Esperando {CHECK_EVERY/60:.0f} min…\n")
+        time.sleep(CHECK_EVERY)
+
+except KeyboardInterrupt:
+    pass
+finally:
+    driver.quit()
+    w("🛑 Servicio detenido por usuario/exit.")
