@@ -1,5 +1,0 @@
-🕓 Servicio iniciado: 2025-04-23 12:51:27
-🔄 Consulta BD 12:51:30 → 0 pendientes
-ℹ️  Sin tareas nuevas.
-🕒 Esperando 10 min...
-

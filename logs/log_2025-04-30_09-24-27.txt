@@ -1,7 +1,0 @@
-🕓 Servicio iniciado: 2025-04-30 09:24:27
-🔄 09:24:30 → pendientes: 2
-[✓] 20174972096 | Exp: E-009130-2025 → fusionado y actualizado (Id 10303)
-[✓] 20174972096 | Exp: E-009130-2025 → fusionado y actualizado (Id 10304)
-✅ Ciclo: OK=2 | OMITIDOS=0 | ERR=0
-🕒 Esperando 10 min…
-

@@ -1,0 +1,4 @@
+selenium>=4.32
+undetected-chromedriver
+pypdf
+pyodbc
