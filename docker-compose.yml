@@ -1,0 +1,24 @@
+services:
+  certnegativa:
+    image: certnegativa
+    container_name: cert_negativa
+    restart: unless-stopped
+    environment:
+      TZ: America/Argentina/Buenos_Aires
+      OUTPUT_DIR: /data/informes
+      LOG_DIR: /data/logs
+      BACKUP_DIR: /data/backups
+      EXP_ROOT: /mnt/expedientes
+      SQL_CONN: >-
+        DRIVER={ODBC Driver 18 for SQL Server};
+        SERVER=sql01,1433;
+        DATABASE=Aportes;
+        UID=certbot;
+        PWD=StrongPass!;
+        Encrypt=yes;
+        TrustServerCertificate=yes;
+    volumes:
+      - C:\CertData\informes:/data/informes
+      - C:\CertData\logs:/data/logs
+      - C:\CertData\backups:/data/backups
+      - Z:\:/mnt/expedientes

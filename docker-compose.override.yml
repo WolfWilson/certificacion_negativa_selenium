@@ -1,0 +1,14 @@
+services:
+  certnegativa:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/app         # ✅ solo monta el código fuente
+    environment:
+      PYTHONUNBUFFERED: 1
+      DISPLAY: :99
+    command: bash -c "\
+      rm -f /tmp/.X99-lock && rm -rf /tmp/chrome_* && \
+      Xvfb :99 -screen 0 1366x768x24 & \
+      exec python obtener_certificacion_negativa.py"

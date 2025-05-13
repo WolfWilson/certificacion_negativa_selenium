@@ -1,0 +1,10 @@
+🕓 Servicio iniciado: 2025-05-13 09:14:52
+🔄 09:14:55 → pendientes: 5
+[✓] 20239877894 | Exp: E-009999-2025 → fusionado y actualizado (Id 10355)
+[✓] 27235048588 | Exp: E-010071-2025 → fusionado y actualizado (Id 10356)
+[✓] 27224771911 | Exp: E-010072-2025 → fusionado y actualizado (Id 10357)
+[✓] 27163677224 | Exp: E-010074-2025 → fusionado y actualizado (Id 10358)
+[✓] 20183825586 | Exp: E-010096-2025 → fusionado y actualizado (Id 10359)
+✅ Ciclo: OK=5 | OMITIDOS=0 | ERR=0
+🕒 Esperando 10 min…
+

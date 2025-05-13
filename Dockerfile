@@ -1,5 +1,5 @@
-FROM python:3.12-slim
-
+FROM python:3.12.10-slim
+#me recomienda otros tags más recientes por vulnerabilidaden libxm12
 # 1. paquetes base
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -14,13 +14,15 @@ RUN mkdir -p /etc/apt/keyrings && \
         https://packages.microsoft.com/debian/12/prod bookworm main" \
         > /etc/apt/sources.list.d/mssql-release.list
 
-# 3. instalar ODBC 18 + unixODBC
-RUN apt-get update && \
-    ACCEPT_EULA=Y apt-get install -y \
+# 3. instalar ODBC 18 + unixODBC + auto update de libxm12
+RUN apt-get update && apt-get upgrade -y && \
+    ACCEPT_EULA=Y apt-get install -y --no-install-recommends \
+        libxml2 \
         msodbcsql18 \
         unixodbc \
         unixodbc-dev && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
+#apt-get upgrade puede aumentar un poco el tamaño de la imagen, pero vale la pena si estás enfocado en seguridad y parches críticos.
 
 # 4. variables de entorno
 ENV PYTHONUNBUFFERED=1
