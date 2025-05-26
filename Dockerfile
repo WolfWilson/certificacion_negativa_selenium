@@ -1,46 +1,66 @@
-FROM python:3.12.10-slim
-#me recomienda otros tags más recientes por vulnerabilidaden libxm12
-# 1. paquetes base
+###############################################################################
+# Certificación Negativa – Contenedor GUI (Xvfb) + FreeTDS + Python 3.9
+# Base Debian Buster con OpenSSL 1.1.1              (compatible SQL 2008 R2)
+###############################################################################
+FROM python:3.9-buster
+
+WORKDIR /app
+# ── 1. Paquetes de sistema ──────────────────────────────────────────────
+#     (cambiamos http → https para evitar 403)
+RUN sed -i 's|http://deb.debian.org|https://deb.debian.org|g' \
+        /etc/apt/sources.list && \
+    sed -i 's|http://security.debian.org|https://security.debian.org|g' \
+        /etc/apt/sources.list && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends \
+        xvfb fluxbox x11vnc net-tools ca-certificates curl gnupg \
+        unixodbc unixodbc-dev freetds-dev tdsodbc freetds-bin \
+        chromium chromium-driver supervisor && \
+    update-ca-certificates --fresh && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+# ── 2. FreeTDS → freetds.conf + odbcinst.ini ────────────────────────────────
+# ── 1. Paquetes gráficos + red ──────────────────────────────────────────────
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        xvfb chromium chromium-driver curl ca-certificates gnupg2 && \
-    rm -rf /var/lib/apt/lists/*
-
-# 2. clave GPG y repo de Microsoft (forma nueva, apt-key deprecated)
-RUN mkdir -p /etc/apt/keyrings && \
-    curl -fsSL https://packages.microsoft.com/keys/microsoft.asc \
-        | gpg --dearmor -o /etc/apt/keyrings/microsoft.gpg && \
-    echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/microsoft.gpg] \
-        https://packages.microsoft.com/debian/12/prod bookworm main" \
-        > /etc/apt/sources.list.d/mssql-release.list
-
-# 3. instalar ODBC 18 + unixODBC + auto update de libxm12
-RUN apt-get update && apt-get upgrade -y && \
-    ACCEPT_EULA=Y apt-get install -y --no-install-recommends \
-        libxml2 \
-        msodbcsql18 \
-        unixodbc \
-        unixodbc-dev && \
+        xvfb fluxbox x11vnc net-tools ca-certificates curl gnupg \
+        unixodbc unixodbc-dev freetds-dev tdsodbc freetds-bin chromium chromium-driver \
+        supervisor && \
+    update-ca-certificates --fresh && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
-#apt-get upgrade puede aumentar un poco el tamaño de la imagen, pero vale la pena si estás enfocado en seguridad y parches críticos.
 
-# 4. variables de entorno
+# ── 2. FreeTDS → freetds.conf + odbcinst.ini ────────────────────────────────
+#     El host se inyectará vía ARG para poder cambiarlo sin re-compilar.
+ARG SQL_HOST=128.0.128.200
+ARG SQL_PORT=1433
+ARG TDS_VER=7.3
+
+RUN echo "[SQL01_SERVER]"              >  /etc/freetds/freetds.conf && \
+    echo "    host = ${SQL_HOST}"     >> /etc/freetds/freetds.conf && \
+    echo "    port = ${SQL_PORT}"     >> /etc/freetds/freetds.conf && \
+    echo "    tds version = ${TDS_VER}" >> /etc/freetds/freetds.conf && \
+    echo "    client charset = UTF-8" >> /etc/freetds/freetds.conf
+
+RUN echo "[FreeTDS]"                                    >  /etc/odbcinst.ini && \
+    echo "Description = FreeTDS unixODBC Driver"       >> /etc/odbcinst.ini && \
+    echo "Driver      = /usr/lib/x86_64-linux-gnu/odbc/libtdsodbc.so" >> /etc/odbcinst.ini && \
+    echo "Setup       = /usr/lib/x86_64-linux-gnu/odbc/libtdsS.so"    >> /etc/odbcinst.ini && \
+    echo "UsageCount  = 1"                              >> /etc/odbcinst.ini
+
+# ── 3. Python deps ──────────────────────────────────────────────────────────
+COPY app/requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir --trusted-host pypi.org --trusted-host files.pythonhosted.org -r requirements.txt
+
+# ── 4. Copiar código ────────────────────────────────────────────────────────
+COPY app/ /app
+
+# ── 5. Supervisor ───────────────────────────────────────────────────────────
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
 ENV PYTHONUNBUFFERED=1
 ENV DISPLAY=:99
-ENV TZ=America/Argentina/Cordoba
 
-# 5. copiar código
-WORKDIR /app
-COPY app/ /app
-RUN pip install --no-cache-dir \
-      --trusted-host pypi.org \
-      --trusted-host files.pythonhosted.org \
-      -r requirements.txt
+# Exponemos puertos de servicios
+EXPOSE 5900
+#EXPOSE 6080       # (añádelo si luego integras noVNC)
 
-
-# 6. entrypoint
-CMD ["bash", "-c", "\
-      rm -f /tmp/.X99-lock && rm -rf /tmp/chrome_* && \
-      Xvfb :99 -screen 0 1366x768x24 & \
-      exec python obtener_certificacion_negativa.py"]
-
+CMD ["/usr/bin/supervisord","-n"]

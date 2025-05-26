@@ -1,0 +1,31 @@
+🕓 Servicio iniciado: 2025-05-13 10:31:45
+🔄 10:31:47 → pendientes: 1
+[✓] 20220022405 | Exp: E-010137-2025 → fusionado y actualizado (Id 10362)
+✅ Ciclo: OK=1 | OMITIDOS=0 | ERR=0
+🕒 Esperando 10 min…
+
+🔄 10:42:32 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 10:52:32 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 11:02:32 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 11:12:32 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 11:22:32 → pendientes: 1
+🛑 Acceso denegado 27230406486 (int 1/3)
+🛑 Acceso denegado 27230406486 (int 2/3)
+🛑 Acceso denegado 27230406486 (int 3/3)
+[✗] 27230406486 | Exp: E-010161-2025 -> Acceso denegado persistente
+✅ Ciclo: OK=0 | OMITIDOS=0 | ERR=1
+🕒 Esperando 10 min…
+
+🛑 Servicio detenido por usuario/exit.
