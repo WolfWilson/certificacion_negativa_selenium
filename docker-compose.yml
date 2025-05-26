@@ -2,17 +2,24 @@ version: "3.9"
 
 services:
   certnegativa:
-    build: .               # o image: certnegativa si ya la subiste
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: cert_negativa
-    restart: unless-stopped
-
-    # --- ¡Aquí va! ---
-    network_mode: host     # ⬅️  MISMA indentación que volumes, env_file, etc.
-
+    network_mode: host
     env_file: .env
     volumes:
-      - C:\CertData\informes:/data/informes
-      - C:\CertData\logs:/data/logs
-      - C:\CertData\backups:/data/backups
-    # Cuando usas host-mode **no** se pueden mapear puertos (ports:),
-    # porque el contenedor comparte la pila de red del host.
+      - ./app:/app                       # código
+      - C:/CertData/salida:/data/salida  # negativas
+      - //fs01/Digitalizacion_Jubilaciones:/data/expedientes  # UNC directa
+      - C:/CertData/logs:/data/logs
+      - C:/CertData/backups:/data/backups
+    environment:
+      PYTHONUNBUFFERED: 1
+      DISPLAY: :99
+    command: >
+      bash -c "
+        rm -f /tmp/.X99-lock && rm -rf /tmp/chrome_* &&
+        Xvfb :99 -screen 0 1366x768x24 &
+        exec python obtener_certificacion_negativa.py
+      "
