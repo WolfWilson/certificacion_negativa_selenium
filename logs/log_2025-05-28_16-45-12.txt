@@ -1,0 +1,7 @@
+🕓 Servicio iniciado: 2025-05-28 16:45:12
+🔄 16:45:14 → pendientes: 7
+[✓] 20185398561 | Exp: E-011418-2025 → fusionado y actualizado (Id 10473)
+[✓] 20175847309 | Exp: E-011420-2025 → fusionado y actualizado (Id 10474)
+[✓] 27141943427 | Exp: E-011466-2025 → fusionado y actualizado (Id 10475)
+ℹ️  27201931296 | Exp: E-011470-2025 ya tiene cert. negativa → marcado Anses=1.
+🛑 Servicio detenido por usuario/exit.

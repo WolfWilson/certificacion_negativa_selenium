@@ -1,0 +1,37 @@
+🕓 Servicio iniciado: 2025-06-02 14:44:49
+🔄 Pendientes: 34
+🛑 Acceso denegado 20220583091 (int 1/3)
+✓ 20220583091 fusionado y actualizado
+✓ 27221550639 fusionado y actualizado
+✓ 27124774530 fusionado y actualizado
+✓ 27185264179 fusionado y actualizado
+✓ 27223542145 fusionado y actualizado
+✓ 23206511494 fusionado y actualizado
+✓ 27220020423 fusionado y actualizado
+✗ 27229053960 | Exp: E-011851-2025 -> Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=137.0.7151.56)
+Stacktrace:
+	GetHandleVerifier [0x0xbcf173+62931]
+	GetHandleVerifier [0x0xbcf1b4+62996]
+	(No symbol) [0x0x9e1053]
+	(No symbol) [0x0x9d0830]
+	(No symbol) [0x0x9ee7ef]
+	(No symbol) [0x0xa5515c]
+	(No symbol) [0x0xa6f2f9]
+	(No symbol) [0x0xa4e2a6]
+	(No symbol) [0x0xa1d5f0]
+	(No symbol) [0x0xa1e464]
+	GetHandleVerifier [0x0xe23463+2504899]
+	GetHandleVerifier [0x0xe1e892+2485490]
+	GetHandleVerifier [0x0xbf590a+220522]
+	GetHandleVerifier [0x0xbe6388+157672]
+	GetHandleVerifier [0x0xbecb6d+184269]
+	GetHandleVerifier [0x0xbd7158+95672]
+	GetHandleVerifier [0x0xbd7300+96096]
+	GetHandleVerifier [0x0xbc21aa+9738]
+	BaseThreadInitThunk [0x0x76055d49+25]
+	RtlInitializeExceptionChain [0x0x7779d03b+107]
+	RtlGetAppContainerNamedObjectPath [0x0x7779cfc1+561]
+
+🛑 Servicio detenido.

@@ -1,0 +1,465 @@
+🕓 Servicio iniciado: 2025-05-28 16:51:28
+🔄 16:51:30 → pendientes: 3
+[✓] 20176972530 | Exp: E-011473-2025 → fusionado y actualizado (Id 10477)
+[✓] 27218306190 | Exp: E-011530-2025 → fusionado y actualizado (Id 10478)
+[✓] 20242972059 | Exp: E-011549-2025 → fusionado y actualizado (Id 10479)
+✅ Ciclo: OK=3 | OMITIDOS=0 | ERR=0
+🕒 Esperando 10 min…
+
+🔄 17:03:46 → pendientes: 1
+[✓] 20176977494 | Exp: E-011554-2025 → fusionado y actualizado (Id 10480)
+✅ Ciclo: OK=1 | OMITIDOS=0 | ERR=0
+🕒 Esperando 10 min…
+
+🔄 17:14:31 → pendientes: 1
+[✓] 27138675624 | Exp: E-011558-2025 → fusionado y actualizado (Id 10481)
+✅ Ciclo: OK=1 | OMITIDOS=0 | ERR=0
+🕒 Esperando 10 min…
+
+🔄 17:25:16 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 17:35:16 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 17:45:16 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 17:55:16 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 18:05:16 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 18:15:16 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 18:25:16 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 18:35:16 → pendientes: 1
+[✓] 27206795803 | Exp: E-011560-2025 → fusionado y actualizado (Id 10482)
+✅ Ciclo: OK=1 | OMITIDOS=0 | ERR=0
+🕒 Esperando 10 min…
+
+🔄 18:46:01 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 18:56:01 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 19:06:01 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 19:16:01 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 19:26:01 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 19:36:01 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 19:46:01 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 19:56:01 → pendientes: 1
+[✓] 27170600938 | Exp: E-011562-2025 → fusionado y actualizado (Id 10483)
+✅ Ciclo: OK=1 | OMITIDOS=0 | ERR=0
+🕒 Esperando 10 min…
+
+🔄 20:06:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 20:16:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 20:26:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 20:36:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 20:46:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 20:56:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 21:06:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 21:16:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 21:26:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 21:36:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 21:46:47 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 21:56:47 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 22:06:47 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 22:16:47 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 22:26:47 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 22:36:47 → pendientes: 1
+[✓] 23206031964 | Exp: E-011563-2025 → fusionado y actualizado (Id 10484)
+✅ Ciclo: OK=1 | OMITIDOS=0 | ERR=0
+🕒 Esperando 10 min…
+
+🔄 22:47:31 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 22:57:32 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 23:07:32 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 23:17:32 → pendientes: 3
+[✓] 20170476248 | Exp: E-011564-2025 → fusionado y actualizado (Id 10485)
+[✓] 27179860185 | Exp: E-011565-2025 → fusionado y actualizado (Id 10486)
+[✓] 27297975485 | Exp: E-011566-2025 → fusionado y actualizado (Id 10487)
+✅ Ciclo: OK=3 | OMITIDOS=0 | ERR=0
+🕒 Esperando 10 min…
+
+🔄 23:29:44 → pendientes: 1
+[✓] 27179808124 | Exp: E-011567-2025 → fusionado y actualizado (Id 10488)
+✅ Ciclo: OK=1 | OMITIDOS=0 | ERR=0
+🕒 Esperando 10 min…
+
+🔄 23:40:29 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 23:50:29 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 00:00:29 → pendientes: 1
+[✓] 20178085868 | Exp: E-011568-2025 → fusionado y actualizado (Id 10489)
+✅ Ciclo: OK=1 | OMITIDOS=0 | ERR=0
+🕒 Esperando 10 min…
+
+🔄 00:11:14 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 00:21:14 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 00:31:14 → pendientes: 1
+[✓] 27143611251 | Exp: E-011569-2025 → fusionado y actualizado (Id 10490)
+✅ Ciclo: OK=1 | OMITIDOS=0 | ERR=0
+🕒 Esperando 10 min…
+
+🔄 00:41:58 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 00:51:59 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 01:01:59 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 01:11:59 → pendientes: 1
+[✓] 23172514219 | Exp: E-011570-2025 → fusionado y actualizado (Id 10491)
+✅ Ciclo: OK=1 | OMITIDOS=0 | ERR=0
+🕒 Esperando 10 min…
+
+🔄 01:22:43 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 01:32:43 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 01:42:43 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 01:52:43 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 02:02:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 02:12:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 02:22:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 02:32:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 02:42:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 02:52:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 03:02:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 03:12:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 03:22:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 03:32:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 03:42:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 03:52:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 04:02:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 04:12:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 04:22:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 04:32:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 04:42:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 04:52:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 05:02:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 05:12:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 05:22:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 05:32:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 05:42:44 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 05:52:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 06:02:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 06:12:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 06:22:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 06:32:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 06:42:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 06:52:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 07:02:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 07:12:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 07:22:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 07:32:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 07:42:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 07:52:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 08:02:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 08:12:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 08:22:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 08:32:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 08:42:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 08:52:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 09:02:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 09:12:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 09:22:45 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 09:32:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 09:42:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 09:52:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 10:02:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 10:12:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 10:22:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 10:32:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 10:42:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 10:52:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 11:02:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 11:12:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 11:22:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🔄 11:32:46 → pendientes: 0
+ℹ️  Sin tareas nuevas.
+🕒 Esperando 10 min…
+
+🛑 Servicio detenido por usuario/exit.

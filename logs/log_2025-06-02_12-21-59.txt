@@ -1,0 +1,3 @@
+🕓 Servicio iniciado: 2025-06-02 12:21:59
+🔄 12:22:02 → pendientes: 29
+🛑 Acceso denegado 27136194564 (int 1/3)
